@@ -7,3 +7,7 @@ shellcheck --shell=bash --external-sources \
 
 shfmt --language-dialect bash --diff \
 	./**/*
+
+markdownlint-cli2 "**/*.md"
+
+yamllint .

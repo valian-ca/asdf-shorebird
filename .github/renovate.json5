@@ -1,0 +1,27 @@
+{
+  extends: [
+    'config:recommended',
+    ':pinDependencies',
+    ':pinDevDependencies',
+    'schedule:earlyMondays',
+    ':semanticCommits',
+    ':semanticCommitTypeAll(chore)'
+  ],
+  dependencyDashboard: true,
+  timezone: 'Canada/Eastern',
+  assigneesFromCodeOwners: true,
+  labels: [
+    'dependencies'
+  ],
+  packageRules: [
+    {
+      matchPackagePatterns: [
+        '.*'
+      ],
+      matchManagers: [
+        'github-actions'
+      ],
+      groupName: 'GitHub Actions Dependencies'
+    },
+  ],
+}
