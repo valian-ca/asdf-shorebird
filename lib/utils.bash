@@ -55,11 +55,19 @@ install_version() {
 
 	(
 		mkdir -p "$install_path"
-		cp -r "$ASDF_DOWNLOAD_PATH"/.git "$install_path"
-		cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"
 
 		local tool_cmd
 		tool_cmd="$(echo "$TOOL_TEST" | cut -d' ' -f1)"
+
+    # shorebird downloads and caches its internal flutter version on first use
+    "$ASDF_DOWNLOAD_PATH/bin/$tool_cmd"
+
+		cp -r "$ASDF_DOWNLOAD_PATH"/.git "$install_path"
+		cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"
+
+		# avoid file permission override when asdf core deletes the download folder
+		rm -rf "$ASDF_DOWNLOAD_PATH"/.git
+
 		test -x "$install_path/bin/$tool_cmd" || fail "Expected $install_path/bin/$tool_cmd to be executable."
 
 		echo "$TOOL_NAME $version installation was successful!"
