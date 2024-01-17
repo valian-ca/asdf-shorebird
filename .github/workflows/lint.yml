@@ -15,6 +15,6 @@ jobs:
       - uses: asdf-vm/actions/install@v2
       - run: scripts/lint.bash
       - name: Check workflow files
-        uses: docker://rhysd/actionlint:1.6.23
+        uses: docker://rhysd/actionlint:1.6.26
         with:
           args: -color
