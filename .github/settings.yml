@@ -55,6 +55,7 @@ branches:
         strict: true
         contexts:
           - Lint
+          - Test
       enforce_admins: false
       required_linear_history: false
       required_conversation_resolution: true
