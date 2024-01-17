@@ -23,7 +23,7 @@ Plugin:
 ```shell
 asdf plugin add shorebird
 # or
-asdf plugin add shorebird https://github.com/johnmartel/asdf-shorebird.git
+asdf plugin add shorebird https://github.com/valian-ca/asdf-shorebird.git
 ```
 
 shorebird:
