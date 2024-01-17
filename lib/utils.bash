@@ -35,14 +35,13 @@ list_all_versions() {
 }
 
 download_release() {
-	local version filename url
+	local version url
 	version="$1"
-	filename="$2"
 
-	url="$GH_REPO/archive/v${version}.tar.gz"
+	url="${GH_REPO}.git"
 
 	echo "* Downloading $TOOL_NAME release $version..."
-	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
+	git clone --depth 1 --branch "v$version" "$url" "$ASDF_DOWNLOAD_PATH"
 }
 
 install_version() {
@@ -56,6 +55,7 @@ install_version() {
 
 	(
 		mkdir -p "$install_path"
+		cp -r "$ASDF_DOWNLOAD_PATH"/.git "$install_path"
 		cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"
 
 		local tool_cmd
