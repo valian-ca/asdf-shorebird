@@ -67,6 +67,7 @@ install_version() {
 
 		# avoid file permission override when asdf core deletes the download folder
 		rm -rf "$ASDF_DOWNLOAD_PATH"/.git
+		rm -rf "$ASDF_DOWNLOAD_PATH"/bin/cache/flutter
 
 		test -x "$install_path/bin/$tool_cmd" || fail "Expected $install_path/bin/$tool_cmd to be executable."
 
