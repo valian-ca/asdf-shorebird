@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/valian-ca/asdf-shorebird/compare/v1.0.1...v1.0.2) (2024-01-17)
+
+
+### Bug Fixes
+
+* install shorebird's internal flutter version before install ([a779475](https://github.com/valian-ca/asdf-shorebird/commit/a779475ee2ef4c6bb49c43abdca4d0e03d141b83))
+
 ## [1.0.1](https://github.com/valian-ca/asdf-shorebird/compare/v1.0.0...v1.0.1) (2024-01-17)
 
 
