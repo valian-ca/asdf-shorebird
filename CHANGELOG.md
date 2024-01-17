@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/valian-ca/asdf-shorebird/compare/v1.0.0...v1.0.1) (2024-01-17)
+
+
+### Bug Fixes
+
+* **latest-stable:** remove unnecessary log ([4d097ef](https://github.com/valian-ca/asdf-shorebird/commit/4d097efa6035b259c919ec572d24ad7df30222aa))
+
 ## 1.0.0 (2024-01-17)
 
 
