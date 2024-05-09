@@ -3,7 +3,7 @@
     'config:recommended',
     ':pinDependencies',
     ':pinDevDependencies',
-    'schedule:earlyMondays',
+    'schedule:monthly',
     ':semanticCommits',
     ':semanticCommitTypeAll(chore)'
   ],
