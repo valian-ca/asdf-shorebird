@@ -11,8 +11,8 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: asdf-vm/actions/install@v3
+      - uses: actions/checkout@v5
+      - uses: asdf-vm/actions/install@v4
       - run: scripts/lint.bash
       - name: Check workflow files
         uses: docker://rhysd/actionlint:1.7.8
